@@ -1,0 +1,41 @@
+# 公共参数
+case_common:
+  allureEpic: 开发平台接口
+  allureFeature: 搜索模块
+  allureStory: 搜索
+
+research_01:
+  host: ${{host()}}
+  url: /search?q=美团招聘
+  method: GET
+  detail: 关键词搜索
+  headers:
+    Content-Type: multipart/form-data
+#    "User-Agent":Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+    #      Content-Type: multipart/form-data;
+    # 请求的数据，是 params 还是 json、或者file、data
+  requestType: data
+
+    # 是否执行，空或者 true 都会执行
+  is_run:
+#    data:
+#      username: '18800000001'
+#      password: '123456'
+      # 是否有依赖业务，为空或者false则表示没有
+  dependence_case: False
+  # 依赖的数据
+  dependence_case_data:
+  assert:
+    # 断言接口状态码
+    errorCode:
+      jsonpath: $.errorCode
+      type: ==
+      value: 0
+      AssertType:
+    # 断言接口返回的username
+#      usernam e:
+#        jsonpath: $.data.username
+#        type: ==
+#        value: '18800000001'
+#        AssertType:
+  sql:
