@@ -225,3 +225,5 @@ collect: false
 
 为了方便大家理解，上方将该参数，以postman的形式上传。
 
+代码参照：https://github.com/hupangs/api_test.git
+详细文档请看：https://blog.csdn.net/qq350146607/article/details/128939167
